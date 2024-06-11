@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Sign In</title>
+</head>
+<body>
+    <div class="con">
+    <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Foods.html">Foods</a>
+            <ul class="a">
+                <li class="f"><a href="Break Fast.html">Break Fast </a>
+                <ul class="b">
+                    <li><a href="Idli and Sambar.html">Idli and Sambar</a></li>
+                    <li><a href="Sushi.html">Sushi</a></li>
+                    <li><a href="Steamed Stuffed Buns.html">Steamed Stuffed Buns</a></li>
+                    <li><a href="Porridge.html">Porridge</a></li>
+                    <li><a href="Bibimbap.html">Bibimbap</a></li>
+                </ul>
+            </li>
+                <li class="g"><a href="Lunch.html">Lunch</a>
+                <ul class="c">
+                    <li><a href="Chicken Biryani.html">Chicken Biryani</a></li>
+                        <li><a href="Ramen Noodles.html">Ramen Noodles</a></li>
+                        <li><a href="General Tso Chicken.html">General Tso Chicken</a></li>
+                        <li><a href="Chicken Parmigiana.html">Chicken Parmigiana</a></li>
+                        <li><a href="Kimchi Fried Rice.html">Kimchi Fried Rice</a></li>
+                </ul>
+            </li>
+                <li class="h"><a href="Dinner.html">Dinner</a>
+                <ul class="d">
+                    <li><a href="Naan Butter Chicken.html">Naan Butter Chicken</a></li>
+                    <li><a href="Tonkatsu.html">Tonkatsu</a></li>
+                    <li><a href="Dumplings.html">Dumplings</a></li>
+                    <li><a href="Cottage pie.html">Cottage pie</a></li>
+                    <li><a href="Samgyeopsal.html">Samgyeopsal</a></li>
+                </ul>
+            </li>
+            </ul>
+        </li>
+        <li><a href="Offer.html">Offers</a></li>
+        <li><a href="Contact Us.html">Contact Us</a></li>
+        <li><a href="Login.html">Login</a></li>
+    </ul>
+</div>
+<br>
+<div class="t">
+    <h1>Sign In</h1><br><br>
+    <form onsubmit="return validation();" action="01.Hotel Web.html">
+
+        <label for="ph"><i class="fa-solid fa-phone"></i> Phone Number</label>
+        <input type="number" name="ph" id="ph" min="1" placeholder="Enter your phone number">
+        <span id="PhoneNumberError" class="ErrorMessage"></span><br><br><br>
+                                                                                                                                                                                                                                    
+        <input type="submit" value="Sign In"><br><br>
+        <div class="para">
+            <p>Don't have an account? <a href="Sign Up.html">Sign Up</a></p>
+        </div>
+        </div>
+    </form>
+</div>
+
+<script>
+    function validation() {
+        const PhoneNumber = document.getElementById("ph").value;
+        let valid = true;
+
+        document.getElementById("PhoneNumberError").style.display = "none";
+
+        const PhoneNumberpattern = /^[6-9][0-9]{9}$/;
+
+        if(PhoneNumber === ""){
+            document.getElementById("PhoneNumberError").innerText = "Enter Your Phone Number";
+            document.getElementById("PhoneNumberError").style.display = "block";
+            valid = false;
+        }
+
+        else if(PhoneNumber.length !== 10){
+            document.getElementById("PhoneNumberError").innerText = "Phone Number must contain only 10 digit";
+            document.getElementById("PhoneNumberError").style.display = "block";
+            valid = false;
+        }
+
+        else if(!PhoneNumberpattern.test(PhoneNumber) ){
+            document.getElementById("PhoneNumberError").innerText = "Invalid Phone Number";
+            document.getElementById("PhoneNumberError").style.display = "block";
+            valid = false;
+        }
+
+        return valid;
+    }
+</script>
+</body>
+</html>

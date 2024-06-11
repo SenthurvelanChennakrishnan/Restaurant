@@ -1,0 +1,119 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+ul{
+    list-style: none;
+    background-color: aqua;
+}
+ul li{
+    display: inline-block;
+    position: relative;
+}
+ul li a{
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 25px;
+}
+ul li ul.a li{
+    display: block;
+}
+ul li ul.a{
+    background-color: aqua;
+    display: none;
+    position: absolute;
+    width: 100%;
+    z-index: 20;
+}
+ul li a:hover{
+    text-decoration: underline;
+    color: blue;
+}
+ul li:hover ul.a{
+    display: block;
+}
+
+.b{
+    transform: translatex(100px) translateY(-98px);
+    background-color: aquamarine;
+    position: absolute;
+    display: none;
+    
+}
+
+.con{
+    position: relative;
+}
+
+.f:hover .b{
+    display: block;
+}
+.c{
+    transform: translatex(100px) translateY(-69px);
+    background-color: aquamarine;
+    position: absolute;
+    display: none;
+    
+}
+
+.con{
+    position: relative;
+}
+
+.g:hover .c{
+    display: block;
+}
+.d{
+    transform: translatex(100px) translateY(-69px);
+    background-color: aquamarine;
+    position: absolute;
+    display: none;
+    
+}
+
+.con{
+    position: relative;
+}
+
+.h:hover .d{
+    display: block;
+}
+.loc{
+    color: white;
+    margin-left: 50px;
+}
+.loc:hover{
+    color: wheat;
+}
+h3{
+    color: blue;
+}
+.map{
+    margin-left: 100px;
+}
+.map:hover{
+    border: 2px solid blue;
+    width: 600px;
+}
+
+.para1{
+    color: blue;
+}
+.para2{
+    margin-left: 50px;
+    color: gold;
+}
+.para2:hover{
+    color: goldenrod;
+}
+h1{
+    padding: 35px;
+    text-align: center;
+    text-shadow: 3px 3px 3px orange;
+    color: rgb(54, 255, 47);
+}
+.all{
+    background-image: url(https://cdn.thecollector.com/wp-content/uploads/2021/02/clara-peeters-still-life-cheeses-almonds-pretzels-painting-e1613488379888.jpg?width=1400&quality=55);
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Contact Us.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Contact Us</title>
+</head>
+<body>
+    <div class="con">
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Foods.html">Foods</a>
+                <ul class="a">
+                    <li class="f"><a href="Break Fast.html">Break Fast </a>
+                    <ul class="b">
+                        <li><a href="Idli and Sambar.html">Idli and Sambar</a></li>
+                        <li><a href="Sushi.html">Sushi</a></li>
+                        <li><a href="Steamed Stuffed Buns.html">Steamed Stuffed Buns</a></li>
+                        <li><a href="Porridge.html">Porridge</a></li>
+                        <li><a href="Bibimbap.html">Bibimbap</a></li>
+                    </ul>
+                </li>
+                    <li class="g"><a href="Lunch.html">Lunch</a>
+                    <ul class="c">
+                        <li><a href="Chicken Biryani.html">Chicken Biryani</a></li>
+                        <li><a href="Ramen Noodles.html">Ramen Noodles</a></li>
+                        <li><a href="General Tso Chicken.html">General Tso Chicken</a></li>
+                        <li><a href="Chicken Parmigiana.html">Chicken Parmigiana</a></li>
+                        <li><a href="Kimchi Fried Rice.html">Kimchi Fried Rice</a></li>
+                    </ul>
+                </li>
+                    <li class="h"><a href="Dinner.html">Dinner</a>
+                    <ul class="d">
+                        <li><a href="Naan Butter Chicken.html">Naan Butter Chicken</a></li>
+                        <li><a href="Tonkatsu.html">Tonkatsu</a></li>
+                        <li><a href="Dumplings.html">Dumplings</a></li>
+                        <li><a href="Cottage pie.html">Cottage pie</a></li>
+                        <li><a href="Samgyeopsal.html">Samgyeopsal</a></li>
+                    </ul>
+                </li>
+                </ul>
+            </li>
+            <li><a href="Offer.html">Offers</a></li>
+            <li><a href="Contact Us.html">Contact Us</a></li>
+            <li><a href="Login.html">Login</a></li>
+        </ul>
+    </div>
+    <br><br>
+   <div class="all">
+    <div class="para1"><br>
+        <h1>Contact Details</h1>
+    </div>
+    <br><br>
+    <div class="para2">
+        <h3></i>Mobile No <i class="fa-solid fa-phone"></i> : +91 90993 72222</h3>
+    </div>
+    <br>
+    <div class="para3">
+        <h3></i>Whats App No <i class="fa-brands fa-whatsapp"></i> : +91 90993 82222</h3>
+    </div>
+    <br>
+    <div class="para4">
+        <h3>Email ID <i class="fa-solid fa-envelope"></i> : delice6@gmail.com</h3>
+    </div>
+    <br>
+    <div class="para5">
+        <h3>Web Address <i class="fa-solid fa-globe"></i> : <a href="01.Hotel Web.html">www.Delice Restaurant.com</a></h3>
+    </div><br><br>
+   </div><br><br>
+  <div class="all1">
+    <div class="cont">
+        <h1>Contact Us</h1>
+       </div>
+       <br><br>
+       <div class="inp">
+        <label for="name">Name</label><br><br>
+       <input type="text" name="name" id="name" placeholder="Enter Your Name">
+       <span id="NameError" class="ErrorMessage"></span><br><br>
+       <label for="mail">Email</label><br><br>
+       <input type="email" name="mail" id="mail" placeholder="Enter Your Email ID">
+       <span id="EmailError" class="ErrorMessage"></span><br><br>
+       <label for="message">Message</label><br><br>
+       <textarea name="message" id="message" placeholder="Type Your Message"></textarea>
+       <span id="MsgError" class="ErrorMessage"></span><br><br><br><br>
+       <button onclick="(validation())"><b>Send Message</b></button>
+       </div>
+  </div><br><br>
+
+  <script>
+    function validation() {
+        const Name = document.getElementById("name").value;
+        const Email = document.getElementById("mail").value;
+        const Message = document.getElementById("message").value;
+        let valid = true;
+
+        document.getElementById("NameError").style.display = "none";
+        document.getElementById("EmailError").style.display = "none";
+        document.getElementById("MsgError").style.display = "none";
+
+        if (Name === "") {
+            document.getElementById("NameError").innerText = "Enter Your Name";
+            document.getElementById("NameError").style.display = "block";
+            valid = false;
+        } else if (Name.length < 3 || Name.length > 12) {
+            document.getElementById("NameError").innerText = "Name must be 3 to 12 characters";
+            document.getElementById("NameError").style.display = "block";
+            valid = false;
+        }
+
+        const Emailpattern = /^[^]+@[^]+\.[a-z]{2,3}$/;
+
+
+        if (Email === "") {
+            document.getElementById("EmailError").innerText = "Enter Your Email";
+            document.getElementById("EmailError").style.display = "block";
+            valid = false;
+        }
+        else if(!Emailpattern.test(Email)){
+            document.getElementById("EmailError").innerText = "Invalid Email";
+            document.getElementById("EmailError").style.display = "block";
+            valid = false;
+        }
+
+        if (Message === "") {
+            document.getElementById("MsgError").innerText = "Enter Your Message";
+            document.getElementById("MsgError").style.display = "block";
+            valid = false;
+        } else if (Message.length < 12) {
+            document.getElementById("MsgError").innerText = "Message be at least 12 characters";
+            document.getElementById("MsgError").style.display = "block";
+            valid = false;
+        }
+
+        return valid;
+    }
+</script>
+
+</body>
+</html>

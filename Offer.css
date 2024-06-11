@@ -1,0 +1,88 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+ul{
+    list-style: none;
+    background-color: aqua;
+}
+ul li{
+    display: inline-block;
+    position: relative;
+}
+ul li a{
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 25px;
+}
+ul li ul.a li{
+    display: block;
+}
+ul li ul.a{
+    background-color: aqua;
+    display: none;
+    position: absolute;
+    width: 100%;
+    z-index: 20;
+}
+ul li a:hover{
+    text-decoration: underline;
+    color: blue;
+}
+ul li:hover ul.a{
+    display: block;
+}
+
+.b{
+    transform: translatex(100px) translateY(-98px);
+    background-color: aquamarine;
+    position: absolute;
+    display: none;
+    
+}
+
+.con{
+    position: relative;
+}
+
+.f:hover .b{
+    display: block;
+}
+.c{
+    transform: translatex(100px) translateY(-69px);
+    background-color: aquamarine;
+    position: absolute;
+    display: none;
+    
+}
+
+.con{
+    position: relative;
+}
+
+.g:hover .c{
+    display: block;
+}
+.d{
+    transform: translatex(100px) translateY(-69px);
+    background-color: aquamarine;
+    position: absolute;
+    display: none;
+    
+}
+
+.con{
+    position: relative;
+}
+
+.h:hover .d{
+    display: block;
+}
+.para1{
+    margin-left: 60%;
+    margin-top: -15%;
+    color: green;
+    text-shadow: 3px 3px 3px red;
+}
